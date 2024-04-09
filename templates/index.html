@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Advanced Calculator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="calculator">
+        <h1>Advanced Calculator</h1>
+        <form method="post">
+            <input type="text" name="expression" placeholder="Enter expression" required>
+            <input type="submit" value="Calculate">
+        </form>
+        {% if result %}
+        <h2>Result: {{ result }}</h2>
+        {% endif %}
+    </div>
+</body>
+</html>
